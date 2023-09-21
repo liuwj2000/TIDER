@@ -42,12 +42,22 @@ Simply 'python3 TIDER.py' can conduct the training, validation and testing proce
 
 •	`--learning_rate`: learning rate
 
-•	`--lambda_trend`: learning rate
+•	`--lambda_trend`: control the loss function of trend matrix
 
 
 For Guangzhou data: It is a 214*61*144 tensor, we can first transfer it into a 214*8784 matrix, then use the last 500 columns as the processed matrix
 
 For Westminster data: a csdn blog is close to our processed: https://blog.csdn.net/qq_40206371/article/details/128932640
 
+
+# AdaTIDER
+
+nearly same as TIDER. The differences lies in:
+
+• no hyperparameter 'seasonality'
+
+• lambda_spatial: control the Laplacian regularization term for matrix U
+
+• topk_freq: the number of frequencies selected in multi-periods seasonality matrix.
 
 
